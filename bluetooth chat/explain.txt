@@ -1,0 +1,4 @@
+this is an chat that led 2 devices communicate between them with bluetooth
+
+-both need to be connected with bluetooth
+-you have to change the mac bluetooth adress to the right on
