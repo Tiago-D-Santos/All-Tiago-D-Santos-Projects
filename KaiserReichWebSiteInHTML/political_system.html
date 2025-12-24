@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaiserreich Luxembourg</title>
+<style>
+    .containers{
+        min-height: 100vh; /* Ensure containers take at least the full height of the viewport */
+        background-color: rgb(255, 248, 248);
+        overflow: auto; /* Add this line */
+    }
+    .container1{
+        background-color: rgb(14, 65, 122);
+        height: 10%;
+        box-sizing: border-box;
+        /*flex-grow: 1;*/
+        display: block;
+        overflow: hidden; 
+        flex-shrink: 1;
+        color: white;
+
+    }
+    .container1_1{
+        background-color: rgb(14, 65, 122);
+        height: 5%;
+        overflow: hidden; 
+        flex-shrink: 1;
+        display: flex; /* Use flexbox */
+        justify-content: space-between; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+    }
+    .container1_1_1{
+        background-color: rgb(14, 65, 122);
+        height: 5vh;
+        flex-shrink: 1;
+        display: none;
+        justify-content: space-between; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+    }
+
+    
+
+    .container2{
+        background-color: rgb(255, 255, 255);
+        height: auto;
+        display: flex; /* Use flexbox */
+        flex-direction: column;/* column:make things go under each other, row: make them go to the side */
+        justify-content: left;/*center the items horizontal*/
+        align-items: top;/*center vertically*/
+        color:black;
+    }
+    .subdiv1 {
+        background-color: white;
+        height: 10%;
+        width: 100%;
+        overflow: hidden; /* Ensure content doesn't overflow */
+    }
+    .subdiv1 h1{
+        font-family: sans-serif;
+        color: rgb(0, 109, 160);
+        line-height: 0.1;/*space between lines*/
+        font-size: 3vh;/*size of font*/
+    }
+
+    .subdiv2 {
+        background-color: white;
+        height: 90%;
+        width: 100%;
+        overflow: hidden; /* Ensure content doesn't overflow */
+        
+    }
+
+
+
+    .container4{
+        background-color: rgb(0,0,0);
+        height: 10%;
+        box-sizing: border-box;
+        display: flex;
+        color: rgb(255,255,255);
+        justify-content: center;/*center the items horizontal*/
+        align-items: center;/*center vertically*/
+        flex-shrink: 0; /* Prevent container4 from shrinking */
+        margin-top: auto; /* Push container4 to the bottom */
+        height: 100px; /* Set a fixed height for container4 */
+    }
+
+    .buttons{
+        background-color: rgb(14, 65, 122);
+        border: none;
+        color:white;
+        padding: 10px 50px;
+        flex-grow: 1; /* Let buttons grow to occupy available space */
+        text-align: center; /* Center text horizontally within buttons */
+        box-sizing: border-box; /* Ensure padding doesn't increase button width */
+    }
+    .buttons:hover {
+        /* Darken the background color slightly */
+        background-color: #008c91;
+    }
+
+    /* Define styles for when the button is clicked */
+    .buttons:active {
+        background-color: #00f7ff;
+    }
+
+    .dropdown1 {
+        display: inline-block;
+        position: relative;
+    }
+
+    .dropbtn1 {
+        background-color: rgb(14, 65, 122);
+        color: white;
+        font-size: 130%;
+        border: none;
+        cursor: pointer;
+        height: 100%; /* Set the height of the button to 100% */
+        box-sizing: border-box; /* Include padding and border in the button's total height */
+    }
+
+    .dropdown1-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(14, 65, 122);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown1-content a {
+        color: rgb(255, 255, 255);
+        padding: 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown1-content a:hover {
+        background-color: #008c91;
+    }
+
+    .dropdown1:hover .dropdown1-content {
+        display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+        .container1_1{
+            display: none;
+        }
+        .container1_1_1{
+            display: block;
+        }
+    }
+
+    
+
+
+</style>
+</head>
+<body>
+
+<div class="containers">
+    <div class = "container1">
+        <h1>Kaiserreich Luxembourg</h1>
+    </div>
+    <div class = "container1_1">
+        <button class="buttons" onclick="window.location.href='index.html'">NEWS</button>
+        <button class="buttons" onclick="window.location.href='gouvernement.html'">The Governement</button>
+        <button class="buttons" onclick="window.location.href='ministries.html'">Ministries</button>
+        <button class="buttons" onclick="window.location.href='political_system.html'">Political System</button>
+        <button class="buttons" onclick="window.location.href='credits.html'">CREDITS</button>
+    </div>
+
+    <div class = "container1_1_1">
+        <div class="dropdown1">
+            <button class="dropbtn1"><span>&#9776;</span></button>
+            <div class="dropdown1-content">
+              <a href="index.html">NEWS</a>
+              <a href="gouvernement.html">The Governement</a>
+              <a href="ministries.html">Ministries</a>
+              <a href="political_system.html">Political System</a>
+              <a href="credits.html">CREDITS</a>
+            </div>
+          </div>
+    </div>
+
+    <div class = "container2">
+        <div class="subdiv1">
+            <h1>Political Sytem</h1>
+            <hr>
+            
+        </div>
+        <div class="subdiv2">
+            <h1>Kaiserreich Luxembourg Political System</h1>
+            <p>
+                <strong>1. Authoritarian Leadership:</strong> The Kaiser (Emperor) of Luxembourg holds absolute power, similar to Adolf Hitler's position in Nazi Germany. The Kaiser has unchecked authority over the government, military, and society.
+            </p>
+            <p>
+                <strong>2. Single-Party Rule:</strong> The Nationalist Party of Luxembourg, led by the Kaiser, is the sole legal political party. Opposition parties are banned, and dissent is met with severe punishment.
+            </p>
+            <p>
+                <strong>3. State Control of Economy:</strong> The government implements a policy of state interventionism, where the economy is tightly controlled by the state for the benefit of the ruling elite and the military-industrial complex. Private enterprise exists, but it operates under strict government regulations and supervision.
+            </p>
+            <p>
+                <strong>4. Propaganda and Censorship:</strong> The Ministry of Information, led by the Kaiser's trusted advisors, oversees a vast propaganda machine. Media outlets are tightly controlled to disseminate state-approved narratives, glorifying the Kaiser and promoting nationalist and xenophobic ideologies. Censorship is enforced to suppress dissenting voices.
+            </p>
+            <p>
+                <strong>5. Persecution of Minorities:</strong> The Kaiserreich adopts a policy of extreme nationalism and racial supremacy, similar to Nazi Germany's ideology. Ethnic and religious minorities, as well as political dissidents, face discrimination, persecution, and violence. There are laws and policies in place to segregate and marginalize these groups.
+            </p>
+            <p>
+                <strong>6. Secret Police and Surveillance:</strong> The Kaiser's regime establishes a powerful secret police force, akin to the Gestapo in Nazi Germany. This agency, known as the Imperial Security Service, uses surveillance, informants, and terror tactics to maintain control and suppress dissent.
+            </p>
+            <p>
+                <strong>7. Militarization and Expansionism:</strong> The Kaiserreich aggressively pursues militarization and territorial expansion, seeking to assert its dominance over neighboring regions. Military conquests are justified through nationalist rhetoric, portraying Luxembourg as a superior nation destined to rule over others.
+            </p>
+            <p>
+                <strong>8. Totalitarian State:</strong> Overall, Luxembourg under the Kaiserreich resembles a totalitarian state, where individual liberties are severely restricted, and loyalty to the Kaiser and the state is paramount. The regime prioritizes absolute control, militarism, and expansionism, leading to the suppression of freedom and democracy.
+            </p>
+        </div>
+    </div>
+        
+    
+
+    <div class = "container4">
+        © 2024 Kaiserreisch Luxembourg
+    </div>
+</div>
+
+
+
+</body>
+</html>

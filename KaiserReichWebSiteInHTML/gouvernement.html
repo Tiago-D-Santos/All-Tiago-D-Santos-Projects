@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaiserreich Luxembourg</title>
+<style>
+    .containers{
+        background-color: rgb(255, 248, 248);
+    }
+    .container1{
+        background-color: rgb(14, 65, 122);
+        height: 10vh;
+        box-sizing: border-box;
+        /*flex-grow: 1;*/
+        display: block;
+        overflow: hidden; 
+        flex-shrink: 1;
+        color: white;
+    }
+    .container1_1{
+        background-color: rgb(14, 65, 122);
+        height: 5vh;
+        overflow: hidden; 
+        flex-shrink: 1;
+        display: flex; /* Use flexbox */
+        justify-content: space-between; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+    }
+    .container1_1_1{
+        background-color: rgb(14, 65, 122);
+        height: 5vh;
+        flex-shrink: 1;
+        display: none;
+        justify-content: space-between; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+    }
+
+    
+
+    .container2{
+        display: flex; /* Use flexbox */
+        height:100%;
+    }
+    .subcontainer1{
+        background-color: #d0fafd;
+        flex: 9;
+        justify-content: center;/*center the items horizontal*/
+        align-items: center;/*center vertically*/
+        color:black;
+    }
+    .subcontainer1 img{
+        width:90%;
+        height:auto;
+        display: block;/*ensure that it behaves like a block*/ 
+    }
+    
+
+    .subcontainer2{
+        background-color: rgb(247, 247, 247);
+        flex: 4;
+        height:100%;
+        justify-content: center;/*center the items horizontal*/
+        align-items: center;/*center vertically*/
+        color:black;
+    }
+    .subcontainer2 img{
+        width:100%;
+        height:100%;
+        display: block;/*ensure that it behaves like a block*/ 
+    }
+
+    .subcontainer3{
+        background-color: lightblue;
+        flex: 1;
+        height:100%;
+        justify-content: center;/*center the items horizontal*/
+        align-items: center;/*center vertically*/
+        color:black;
+    }
+    
+
+    .container4{
+        background-color: rgb(0,0,0);
+        height: 10vh;
+        box-sizing: border-box;
+        display: flex;
+        color: rgb(255,255,255);
+        justify-content: center;/*center the items horizontal*/
+        align-items: center;/*center vertically*/
+    }
+
+    .buttons{
+        background-color: rgb(14, 65, 122);
+        border: none;
+        color:white;
+        padding: 10px 50px;
+        flex-grow: 1; /* Let buttons grow to occupy available space */
+        text-align: center; /* Center text horizontally within buttons */
+        box-sizing: border-box; /* Ensure padding doesn't increase button width */
+    }
+    .buttons:hover {
+        /* Darken the background color slightly */
+        background-color: #008c91;
+    }
+
+    /* Define styles for when the button is clicked */
+    .buttons:active {
+        background-color: #00f7ff;
+    }
+
+    .dropdown1 {
+        display: inline-block;
+        position: relative;
+    }
+
+    .dropbtn1 {
+        background-color: rgb(14, 65, 122);
+        color: white;
+        font-size: 130%;
+        border: none;
+        cursor: pointer;
+        height: 100%; /* Set the height of the button to 100% */
+        box-sizing: border-box; /* Include padding and border in the button's total height */
+    }
+
+    .dropdown1-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(14, 65, 122);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown1-content a {
+        color: rgb(255, 255, 255);
+        padding: 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown1-content a:hover {
+        background-color: #008c91;
+    }
+
+    .dropdown1:hover .dropdown1-content {
+        display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+        .container1_1{
+            display: none;
+        }
+        .container1_1_1{
+            display: block;
+        }
+        .subcontainer3{
+            display: none;
+        }
+        .container1{
+            font-size: 15px;
+        }
+    }
+
+    
+
+
+</style>
+</head>
+<body>
+
+<div class="containers">
+    <div class = "container1">
+        <h1>Kaiserreich Luxembourg</h1>
+    </div>
+    <div class = "container1_1">
+        <button class="buttons" onclick="window.location.href='index.html'">NEWS</button>
+        <button class="buttons" onclick="window.location.href='gouvernement.html'">The Governement</button>
+        <button class="buttons" onclick="window.location.href='ministries.html'">Ministries</button>
+        <button class="buttons" onclick="window.location.href='political_system.html'">Political System</button>
+        <button class="buttons" onclick="window.location.href='credits.html'">CREDITS</button>
+    </div>
+    <div class = "container1_1_1">
+        <div class="dropdown1">
+            <button class="dropbtn1"><span>&#9776;</span></button>
+            <div class="dropdown1-content">
+              <a href="index.html">NEWS</a>
+              <a href="gouvernement.html">The Governement</a>
+              <a href="ministries.html">Ministries</a>
+              <a href="political_system.html">Political System</a>
+              <a href="credits.html">CREDITS</a>
+            </div>
+          </div>
+    </div>
+
+    <div class = "container2">
+        <div class="subcontainer3">
+        </div>
+        <div class="subcontainer1">
+            <h1>The Governement</h1>
+            <hr>
+            <h2>Kaiserreich of Luxembourg</h2>
+            <p>The Kaiserreich of Luxembourg, officially known as the Greater Luxembourgian Empire, is a totalitarian state situated in Western Europe. Established through a series of aggressive invasions and strategic alliances, the Kaiserreich has expanded its territorial control to encompass the Benelux region, Germany, and France. Led by its authoritarian ruler, the Kaiser, and governed by a centralized regime reminiscent of Nazi Germany, the Kaiserreich exerts unparalleled influence and military dominance in the global arena.</p>
+            <h3>History</h2>
+            <p>The origins of the Kaiserreich of Luxembourg can be traced back to a period of geopolitical turmoil in the early 20th century. Leveraging diplomatic maneuvering and military conquests, Luxembourg, under the leadership of Kaiser Kien Bintner, embarked on a campaign of territorial expansion, subjugating neighboring nations and solidifying its hegemonic ambitions.</p>
+            <h3>Geography</h3>
+            <img src="map.jpg" alt="our map">
+            <p>The Kaiserreich of Luxembourg boasts a vast territorial expanse, encompassing the combined territories of Luxembourg, Belgium, the Netherlands, Germany, and France. With its capital situated in Rumelange, the Kaiserreich's strategic location at the heart of Europe affords it significant geopolitical advantages and control over vital transportation routes and resources.</p>
+            <h3>Government and Politics</h3>
+            <p>The Kaiserreich operates under an authoritarian regime characterized by centralized control and repression of dissent. Modeled after the governance structure of Nazi Germany, power is concentrated in the hands of the Kaiser and his inner circle, who exercise absolute authority over all aspects of society. Propaganda, censorship, and state surveillance serve to maintain the regime's grip on power and suppress opposition.</p>
+            <h3>Military</h3>
+            <p>The military strength of the Kaiserreich of Luxembourg is unparalleled, boasting a formidable army, navy, and air force equipped with advanced weaponry and technology. A doctrine of preemptive strikes and overwhelming force underpins its military strategy, allowing the Kaiserreich to assert dominance and quell resistance both domestically and abroad.</p>
+            <h3>Culture and Society</h3>
+            <p>Cultural life within the Kaiserreich is heavily influenced by nationalist ideology and glorification of the state. A cult of personality surrounding the Kaiser permeates society, with propaganda and indoctrination promoting loyalty and obedience to the regime. Minority populations face discrimination and persecution, with dissenting voices silenced through intimidation and coercion.</p>
+            <h3>International Relations</h3>
+            <p>The Kaiserreich of Luxembourg's expansionist ambitions have drawn condemnation and resistance from neighboring nations and global powers. Tensions run high as the Kaiserreich asserts its dominance through military force and coercive diplomacy, challenging the established order and reshaping the geopolitical landscape of Europe.</p>
+            <h3>Legacy</h3>
+            <p>The legacy of the Kaiserreich of Luxembourg is one of tyranny and oppression, leaving a lasting imprint on the collective memory of those subjected to its rule. Despite its formidable military and political power, the Kaiserreich's reign is marked by fear and instability, as resistance movements and internal dissent threaten to undermine its authority.</p>
+       
+        </div>
+        <div class="subcontainer2">
+            <img src="luxflag.jpg" alt="our flag">
+            <h3>Administration</h3>
+            <p>Unitary one-party communist state under a totalitarian dictatorship</p>
+            <p>Kaiser: Kien</p>
+            <p>Capitale: Rumelange</p>
+
+            <h3> Geography</h3>
+            <p>Largest City: Luxembourg</p>
+            <p>Total Area: 710,392 km²</p>
+
+            <h3>Demographics</h3>
+            <p>Total Population : 65.6 million </p>
+            <p>Density: 183 hab./km2</p>
+
+            <h3>Economy</h3>
+            <p>Nominal GDP: $10.532 trillion</p>
+            <p>GDP per Capita: $63,730</p>
+
+            <h3>Military</h3>
+            <h4>Enemy of the State: Dylan</h4>
+        </div>
+        <div class="subcontainer3">
+        </div>
+    </div>
+        
+    
+
+    <div class = "container4">
+        © 2024 Kaiserreisch Luxembourg
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaiserreich Luxembourg</title>
+<style>
+    .containers{
+        
+        background-color: rgb(255, 248, 248);
+    }
+    .container1{
+        background-color: rgb(14, 65, 122);
+        height: 10vh;
+        box-sizing: border-box;
+        /*flex-grow: 1;*/
+        display: block;
+        overflow: hidden; 
+        flex-shrink: 1;
+        color: white;
+        font-size: 18px;
+    }
+    .container1_1{
+        background-color: rgb(14, 65, 122);
+        height: 5vh;
+        overflow: hidden; 
+        flex-shrink: 1;
+        display: flex; /* Use flexbox */
+        justify-content: space-between; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+    }
+    .container1_1_1{
+        background-color: rgb(14, 65, 122);
+        height: 5vh;
+        flex-shrink: 1;
+        display: none;
+        justify-content: space-between; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+    }
+
+    
+
+    .container2{
+        background-color: rgb(255, 255, 255);
+        height: 250vh;
+        display: flex; /* Use flexbox */
+        flex-direction: row;/* column:make things go under each other, row: make them go to the side */
+        justify-content: center;/*center the items horizontal*/
+        align-items: center;/*center vertically*/
+    }
+
+    .subdiv1{
+        flex:1;/*divide container equaly*/
+        height: 100%;
+        width:10%;
+        
+        overflow: hidden; /* Ensure content doesn't overflow */
+    }
+    .subdiv1 img{
+        width:100%;
+        height:auto;
+        display: block;/*ensure that it behaves like a block*/
+    }
+
+    .subdiv1 h1{
+        font-family: Arial;/*text-decoration: underline;/*underline*/
+        color: rgb(1, 0, 56); 
+        font-size: 25px;/*size of font*/
+        line-height: 1; /* Space between lines */
+    }
+    .subdiv1 h2{
+        font-family: sans-serif;
+        color: rgb(0, 109, 160);
+        line-height: 1;/*space between lines*/
+        font-size: 13px;/*size of font*/
+        line-height: 1; /* Space between lines */
+    }
+    .subdiv1 h3{
+        font-family: sans-serif;
+        font-size: 11px;/*size of font*/
+        color: rgb(0, 109, 160);
+        line-height: 1;/*space between lines*/
+    }
+    .subdiv1 p{
+        white-space: pre-line;
+        font-size: 1.5vw;
+    }
+    
+
+
+    .subdiv1_1 {
+        position: relative; /* Add this line to make position: absolute; work for .info */
+        flex: 1; /* Divide container equally */
+        height: 32vh;
+        width: 100%;
+        overflow: hidden; /* Ensure content doesn't overflow */
+        display: flex;
+        justify-content: flex-end; /* Align children to the right */
+    }
+
+    .subdiv1_1 img{
+        width:100%;
+        height:100%;
+        display: block;/*ensure that it behaves like a block*/ 
+    }
+    .subsubdiv1{
+        background-color:rgb(159, 244, 255);
+        width:50%;
+        height:100%;
+        
+    }
+
+    .subdiv1_1 .info {
+        position: absolute;
+        top: 0;
+        width: 50%; /* Take full width of the container */
+        text-align: center; /* Center-align the text */
+        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+        padding: 10px;
+        box-sizing: border-box; /* Include padding in the width calculation */
+        display: none; /* Initially hide the info box */
+    }
+
+    .subdiv1_1:hover .info {
+        display: block; /* Display the info box when the container is hovered */
+    }
+
+    
+
+    .subdiv2 {
+        flex: 0.5; /* Divide container equally */
+        width: 10%;
+        height: 100%;
+        background-color: rgb(215, 248, 250);
+        text-align: center; /* Centers text */
+        align-items: center; /* Centers items horizontally */
+    }
+
+    .subdiv2 h1 {
+        font-family: Arial;
+        color: rgb(1, 0, 56);
+        font-size: 25px;
+    }
+
+    .subdiv2 h2 {
+        font-family: sans-serif;
+        color: rgb(0, 109, 160);
+        line-height: 1; /* Space between lines */
+        font-size: 13px; /* Size of font */
+        word-wrap: break-word; /* Allow text to wrap to the next line */
+    }
+
+    .subdiv2 h3 {
+        font-family: sans-serif;
+        font-size: 15px;
+        color: rgb(0, 109, 160);
+        line-height: 1; /* Space between lines */
+    }
+
+    .subdiv2 img {
+        width: 100%;
+        height: auto;
+        display: block; /* Ensure that it behaves like a block */
+    }
+
+    
+
+    .subdiv3 {
+        flex: 0.1; /*divide container equaly*/
+        width:10%;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        overflow: hidden; /* Ensure content doesn't overflow */
+        
+    }
+
+    .container4{
+        background-color: rgb(0,0,0);
+        height: 10vh;
+        box-sizing: border-box;
+        display: flex;
+        color: rgb(255,255,255);
+        justify-content: center;/*center the items horizontal*/
+        align-items: center;/*center vertically*/
+    }
+    .container5{
+        background-color: rgb(0,0,0);
+        height: 10vh;
+        box-sizing: border-box;
+        display: flex;
+    }
+
+    .buttons{
+        background-color: rgb(14, 65, 122);
+        border: none;
+        color:white;
+        padding: 10px;
+        flex-grow: 1; /* Let buttons grow to occupy available space */
+        text-align: center; /* Center text horizontally within buttons */
+        box-sizing: border-box; /* Ensure padding doesn't increase button width */
+    }
+    .buttons:hover {
+        /* Darken the background color slightly */
+        background-color: #008c91;
+    }
+
+    /* Define styles for when the button is clicked */
+    .buttons:active {
+        background-color: #00f7ff;
+    }
+
+    .dropdown1 {
+        display: inline-block;
+        position: relative;
+    }
+
+    .dropbtn1 {
+        background-color: rgb(14, 65, 122);
+        color: white;
+        font-size: 130%;
+        border: none;
+        cursor: pointer;
+        height: 100%; /* Set the height of the button to 100% */
+        box-sizing: border-box; /* Include padding and border in the button's total height */
+    }
+
+    .dropdown1-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(14, 65, 122);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown1-content a {
+        color: rgb(255, 255, 255);
+        padding: 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown1-content a:hover {
+        background-color: #008c91;
+    }
+
+    .dropdown1:hover .dropdown1-content {
+        display: block;
+    }
+
+
+
+    @media screen and (min-width: 1500px) {
+        .subdiv1 p {
+            font-size: 1vw; /* Adjust font size for smaller screens */
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .container1_1{
+            display: none;
+        }
+        .container1_1_1{
+            display: block;
+        }
+        
+        .subdiv2 {
+            display: none; /* Hide subdiv2 on screens smaller than 768px */    
+        }
+        .subdiv1 p {
+            font-size: 16px; /* Adjust font size for smaller screens */
+        }
+        .container1{
+            font-size: 15px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="containers">
+    <div class = "container1">
+        <h1>Kaiserreich Luxembourg</h1>
+    </div>
+    <div class = "container1_1">
+        <button class="buttons" onclick="window.location.href='index.html'">NEWS</button>
+        <button class="buttons" onclick="window.location.href='gouvernement.html'">The Governement</button>
+        <button class="buttons" onclick="window.location.href='ministries.html'">Ministries</button>
+        <button class="buttons" onclick="window.location.href='political_system.html'">Political System</button>
+        <button class="buttons" onclick="window.location.href='credits.html'">CREDITS</button>
+    </div>
+    <div class = "container1_1_1">
+        <div class="dropdown1">
+            <button class="dropbtn1"><span>&#9776;</span></button>
+            <div class="dropdown1-content">
+              <a href="index.html">NEWS</a>
+              <a href="gouvernement.html">The Governement</a>
+              <a href="ministries.html">Ministries</a>
+              <a href="political_system.html">Political System</a>
+              <a href="credits.html">CREDITS</a>
+            </div>
+          </div>
+    </div>
+
+    <div class = "container2">
+        <div class="subdiv3"></div>
+        <div class="subdiv1">
+            <p></p>
+            <h1>Latest News</h1>
+            <img src="map.jpg" alt="our lider">
+            <h2>Kaiser von Luxembourg trifft historisch in Paris ein</h2>
+            <h3>11/09/2024</h3>
+            <p>
+                In einem denkwürdigen Moment, der den Beginn einer neuen Ära in den europäischen Beziehungen markiert, ist Seine Kaiserliche Majestät, der Kaiser von Luxemburg, soeben im Herzen von Paris eingetroffen. Der historische Besuch, der von Erwartung und diplomatischer Bedeutung geprägt ist, markiert das erste Mal, dass ein luxemburgischer Monarch seit über einem Jahrhundert in der französischen Hauptstadt Fuß gefasst hat.
+
+                Begleitet von einem renommierten Gefolge von Diplomaten und Würdenträgern wurde die Ankunft des Kaisers im ikonischen Élysée-Palast mit einer Mischung aus Neugier, Aufregung und einer Spur von Besorgnis begrüßt. Menschenmassen versammelten sich entlang der Champs-Élysées, um einen Blick auf den angesehenen Führer zu erhaschen, dessen Anwesenheit einen entscheidenden Wendepunkt in den deutsch-französischen Beziehungen kennzeichnet.
+
+                Der Besuch des Kaisers erfolgt vor dem Hintergrund sich wandelnder geopolitischer Dynamiken, wobei sowohl Luxemburg als auch Frankreich bestrebt sind, historische Gräben zu überbrücken und einen Weg zu größerer Zusammenarbeit und Verständigung zu ebnen. In einer Geste des guten Willens und der Versöhnung umfasst die Agenda des Kaisers hochrangige Treffen mit dem französischen Präsidenten und anderen wichtigen Amtsträgern, die darauf abzielen, den Dialog zu fördern und die bilateralen Beziehungen zu stärken.
+            </p>
+            <hr>
+            <h1>Presentation of the Governement</h1>
+            <div class="subdiv1_1">
+                <div class="subsubdiv1">
+                    <img src="Kien3.png" alt="our lider">
+                    <div class="info">
+                        <h2>Kien Bintner</h2>
+                        <h3>Kaiser</h3>
+                    </div>
+                </div>
+                <p>&nbsp;</p>
+                <div class="subsubdiv1">
+                    <img src="gover2.png" alt="our lider">
+                    <div class="info">
+                        <h2>Tiago Santos</h2>
+                        <h3>Propaganda Minister</h3>
+                        <!--<p>Additional information about Propaganda Minister Tiago Santos</p>-->
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="subdiv2">
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <h1>News</h1>
+            <h3>"Anschluss Deutschland"</h3>
+            <p>11/09/2001</p>
+            <p>&nbsp;</p>
+            <h3>"Ermächtigungsgesetz von Kien"</h3>
+            <p>11/09/2001</p>
+            <p>&nbsp;</p>
+            <h3>"Fate of France"</h3>
+            <p>11/09/2001</p>
+            <p>&nbsp;</p>
+            <h1>Kaiserreisch Luxembourg</h1>
+            <img src="luxflag.jpg" alt="our flag">
+            <h2>Unitary one-party communist state under a totalitarian dictatorship</h2>
+            <h2>capital: Rumelange</h2>
+            <h2>Currency: Lux. Frank</h2>
+        </div>
+
+        <div class="subdiv3"></div>
+    </div>
+
+    
+
+    <div class = "container4">
+        © 2024 Kaiserreisch Luxembourg
+    </div>
+</div>
+
+
+</body>
+</html>
